@@ -45,6 +45,28 @@ header{
     background: #4c79d3;
     color: #ffffff;
 }
+.button-cancel{
+    border-radius: 10px;
+}
+.button-float{
+    border-radius: 100%;
+    border: 2px solid #4e0070;
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    padding: 0 !important;
+    bottom: 1rem;
+    right: 2rem;
+    font-size: 35px;
+    background-color: #4e0070;
+    color: #ffffff;
+}
+.button-float:hover{
+    border: 2px solid #4c79d3;
+    background-color: #ffffff;
+    color: #4c79d3;
+
+}
 .link-default{
     color: #4e0070;
     cursor: pointer;
