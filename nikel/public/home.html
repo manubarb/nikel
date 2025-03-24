@@ -19,7 +19,7 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse justify-content-end">
-                <div class="d-flex">
+                <div class="d-flex menu">
                     <div>
                         <a href="home.html">
                             <button type="button" class="btn">
@@ -38,8 +38,8 @@
                         <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle fs-4"></i>
                         </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Sair</a></li>
+                        <ul class="dropdown-menu logout">
+                          <li><button id="button-logout" class="dropdown-item">Sair</button></li>
                         </ul>
                       </div>
                 </div>
@@ -53,7 +53,7 @@
             <div class="row">
                 <div class="col d-flex mt-4 justify-content-start align-items-center">
                     <i class="bi bi-cash-coin color-primary icon-detail"></i>
-                    <span class="fs-2">R$0.00</span>
+                    <span class="fs-2" id="total">R$0.00</span>
                 </div>
                 <div class="col d-flex mt-4 justify-content-end">
                     <div class="text-center">
@@ -77,21 +77,17 @@
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col">R$1000.00</div>
-                                    </div>
+                                <div class="container p-0" id="cash-in">
+                                    
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col">R$500.00</div>
-                                    </div>
+                                <div class="container p-0" id="cash-out">
+                                    
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <button type="button" class="btn button-default">Mostrar mais</button>
+                            <div class="col-12 mb-4">
+                                <button type="button" class="btn button-default" id="transactions-button">Mostrar mais</button>
                             </div>
                         </div>
                     </div>
@@ -110,23 +106,23 @@
                     <form id="transaction-form">
                         <div class="mb-3">
                           <label for="value-input" class="form-label">Valor</label>
-                          <input type="number" class="form-control" id="value-input" aria-describedby="emailHelp" placeholder="E-mail">
+                          <input type="number" class="form-control" id="value-input" aria-describedby="emailHelp" placeholder="E-mail" required>
                         </div>
                         <div class="mb-3">
                           <label for="description-input" class="form-label">Descrição</label>
-                          <input type="text" class="form-control" id="description-input" placeholder="Senha">
+                          <input type="text" class="form-control" id="description-input" placeholder="Senha" required>
                         </div>
                         <div class="mb-3">
                             <label for="date-input" class="form-label">Data</label>
-                            <input type="date" class="form-control" id="date-input" placeholder="Senha">
+                            <input type="date" class="form-control" id="date-input" placeholder="Senha" required>
                           </div>
                         <div class="mb-3">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="type-input" id="inlineRadio1" value="option1" checked>
+                                <input class="form-check-input" type="radio" name="type-input" id="inlineRadio1" value="1" checked>
                                 <label class="form-check-label" for="inlineRadio1">Entrada</label>
                               </div>
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="type-input" id="inlineRadio2" value="option2">
+                                <input class="form-check-input" type="radio" name="type-input" id="inlineRadio2" value="2">
                                 <label class="form-check-label" for="inlineRadio2">Saída</label>
                               </div>
                         </div>
